@@ -18,6 +18,12 @@ import UIKit
 
 class DetailViewController: UIViewController {
 
+  @IBOutlet weak var nameLabel: UILabel!
+  @IBOutlet weak var partOfSpeechLabel: UILabel!
+  @IBOutlet weak var furtherDetailLabel: UILabel!
+  @IBOutlet weak var descriptionLabel: UILabel!
+  @IBOutlet weak var imageView: UIImageView!
+  
   var weapon: Weapon? {
     didSet {
       // Update the view.
@@ -31,6 +37,11 @@ class DetailViewController: UIViewController {
     // Update the user interface for the detail item.
     if let weapon = self.weapon {
       self.title = weapon.name
+      self.nameLabel.text = weapon.name
+      self.partOfSpeechLabel.text = weapon.partOfSpeech
+      self.furtherDetailLabel.text = weapon.alternative
+      self.descriptionLabel.text = weapon.detail
+      self.imageView.image = weapon.image
     }
   }
   
