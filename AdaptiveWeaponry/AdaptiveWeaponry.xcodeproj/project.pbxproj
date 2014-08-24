@@ -17,6 +17,8 @@
 		22850FB619A99A7D00C60CD4 /* Weapon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22850FB419A99A7D00C60CD4 /* Weapon.swift */; };
 		22850FB719A99A7D00C60CD4 /* WeaponCollection.plist in Resources */ = {isa = PBXBuildFile; fileRef = 22850FB519A99A7D00C60CD4 /* WeaponCollection.plist */; };
 		22850FB919A99FC100C60CD4 /* ImageAttributions in Resources */ = {isa = PBXBuildFile; fileRef = 22850FB819A99FC100C60CD4 /* ImageAttributions */; };
+		22F8AB1C19AA218600059E38 /* SplitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB1B19AA218600059E38 /* SplitViewController.swift */; };
+		22F8AB1E19AA232200059E38 /* TraitOverrideViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 22F8AB1D19AA232200059E38 /* TraitOverrideViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +46,8 @@
 		22850FB419A99A7D00C60CD4 /* Weapon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Weapon.swift; sourceTree = "<group>"; };
 		22850FB519A99A7D00C60CD4 /* WeaponCollection.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = WeaponCollection.plist; sourceTree = "<group>"; };
 		22850FB819A99FC100C60CD4 /* ImageAttributions */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = ImageAttributions; sourceTree = "<group>"; };
+		22F8AB1B19AA218600059E38 /* SplitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitViewController.swift; sourceTree = "<group>"; };
+		22F8AB1D19AA232200059E38 /* TraitOverrideViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TraitOverrideViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +98,8 @@
 				22850FB819A99FC100C60CD4 /* ImageAttributions */,
 				22850F9219A999B300C60CD4 /* Supporting Files */,
 				22390E4619FA313A00251C0E /* Launch Screen.xib */,
+				22F8AB1B19AA218600059E38 /* SplitViewController.swift */,
+				22F8AB1D19AA232200059E38 /* TraitOverrideViewController.swift */,
 			);
 			path = AdaptiveWeaponry;
 			sourceTree = "<group>";
@@ -234,6 +240,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				22F8AB1C19AA218600059E38 /* SplitViewController.swift in Sources */,
+				22F8AB1E19AA232200059E38 /* TraitOverrideViewController.swift in Sources */,
 				22850F9919A999B300C60CD4 /* DetailViewController.swift in Sources */,
 				22850FB619A99A7D00C60CD4 /* Weapon.swift in Sources */,
 				22850F9719A999B300C60CD4 /* MasterViewController.swift in Sources */,

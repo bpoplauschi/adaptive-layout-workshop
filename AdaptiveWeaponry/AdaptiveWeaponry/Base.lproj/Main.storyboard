@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="95P-J8-Us5">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -169,10 +169,42 @@
             </objects>
             <point key="canvasLocation" x="604" y="30"/>
         </scene>
+        <!--Trait Override-->
+        <scene sceneID="RtX-7g-SNa">
+            <objects>
+                <viewController title="Trait Override" id="95P-J8-Us5" customClass="TraitOverrideViewController" customModule="AdaptiveWeaponry" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="m4k-OJ-gOt"/>
+                        <viewControllerLayoutGuide type="bottom" id="Se7-OY-Ruu"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ggy-UG-LoN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="81M-XQ-3wq">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <connections>
+                                    <segue destination="H1p-Uh-vWS" kind="embed" id="NRf-E1-QMw"/>
+                                </connections>
+                            </containerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="centerY" secondItem="81M-XQ-3wq" secondAttribute="centerY" id="Mul-93-aCs"/>
+                            <constraint firstAttribute="centerX" secondItem="81M-XQ-3wq" secondAttribute="centerX" id="WDa-uc-4Bd"/>
+                            <constraint firstItem="81M-XQ-3wq" firstAttribute="width" secondItem="ggy-UG-LoN" secondAttribute="width" id="e9x-9I-bq5"/>
+                            <constraint firstItem="81M-XQ-3wq" firstAttribute="height" secondItem="ggy-UG-LoN" secondAttribute="height" id="zpm-hz-LGd"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="QhE-4K-xR2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1436" y="-322"/>
+        </scene>
         <!--Split View Controller-->
         <scene sceneID="Nki-YV-4Qg">
             <objects>
-                <splitViewController id="H1p-Uh-vWS" sceneMemberID="viewController">
+                <splitViewController id="H1p-Uh-vWS" customClass="SplitViewController" customModule="AdaptiveWeaponry" customModuleProvider="target" sceneMemberID="viewController">
                     <toolbarItems/>
                     <connections>
                         <segue destination="RMx-3f-FxP" kind="relationship" relationship="masterViewController" id="BlO-5A-QYV"/>
