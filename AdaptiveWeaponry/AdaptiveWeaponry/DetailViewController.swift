@@ -23,6 +23,7 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var furtherDetailLabel: UILabel!
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var imageView: UIImageView!
+  @IBOutlet weak var bgImageView: UIImageView!
   
   @IBOutlet var wideLayoutConstraints: [NSLayoutConstraint]!
   @IBOutlet var tallLayoutConstraints: [NSLayoutConstraint]!
@@ -46,6 +47,11 @@ class DetailViewController: UIViewController {
       self.descriptionLabel.text = weapon.detail
       self.imageView.image = weapon.image
     }
+    
+    // Select the correct background image
+    let transitionToWide = view.bounds.size.width > view.bounds.size.height
+    let image = UIImage(named: transitionToWide ? "bg_wide" : "bg_tall")
+    self.bgImageView.image = image
   }
   
   override func viewDidLoad() {
@@ -58,6 +64,24 @@ class DetailViewController: UIViewController {
   override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
     super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
     setupConstraintsForSize(size)
+    
+    let transitionToWide = size.width > size.height
+    let image = UIImage(named: transitionToWide ? "bg_wide" : "bg_tall")
+    
+    coordinator.animateAlongsideTransition({
+      context in
+      // Create a transition and match the context's duration
+      let transition = CATransition()
+      transition.duration = context.transitionDuration()
+      
+      // Make it fade
+      transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+      transition.type = kCATransitionFade
+      self.bgImageView.layer.addAnimation(transition, forKey: "Fade")
+      
+      // Set the new image
+      self.bgImageView.image = image
+      }, completion: nil)
   }
   
   func setupConstraintsForSize(size: CGSize) {

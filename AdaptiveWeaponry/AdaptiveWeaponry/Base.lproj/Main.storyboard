@@ -33,7 +33,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kusarigama" translatesAutoresizingMaskIntoConstraints="NO" id="LyX-4w-bhe">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_tall" translatesAutoresizingMaskIntoConstraints="NO" id="NNT-dZ-UYp">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="kusarigama" translatesAutoresizingMaskIntoConstraints="NO" id="LyX-4w-bhe">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hAF-qP-Yxl">
@@ -64,7 +67,6 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="vU3-2E-K7v" firstAttribute="top" secondItem="CY4-v1-oAZ" secondAttribute="bottom" constant="8" id="35x-pV-kuE"/>
                                     <constraint firstItem="CY4-v1-oAZ" firstAttribute="leading" secondItem="hAF-qP-Yxl" secondAttribute="leadingMargin" id="B2G-cE-29H"/>
@@ -84,14 +86,18 @@
                             <constraint firstAttribute="trailing" secondItem="LyX-4w-bhe" secondAttribute="trailing" id="4TT-a1-6i4"/>
                             <constraint firstItem="LyX-4w-bhe" firstAttribute="height" secondItem="svH-Pt-448" secondAttribute="height" multiplier="0.5" id="DOr-Nd-S5c"/>
                             <constraint firstItem="LyX-4w-bhe" firstAttribute="top" secondItem="svH-Pt-448" secondAttribute="top" id="Esa-n4-Osn"/>
+                            <constraint firstAttribute="centerX" secondItem="NNT-dZ-UYp" secondAttribute="centerX" id="H1D-BP-NAj"/>
                             <constraint firstItem="hAF-qP-Yxl" firstAttribute="top" secondItem="svH-Pt-448" secondAttribute="top" id="Iu2-nZ-fkv"/>
                             <constraint firstItem="hAF-qP-Yxl" firstAttribute="width" secondItem="svH-Pt-448" secondAttribute="width" multiplier="0.5" id="P18-te-t3T"/>
                             <constraint firstAttribute="bottom" secondItem="LyX-4w-bhe" secondAttribute="bottom" id="Tdp-Rh-2aI"/>
                             <constraint firstItem="hAF-qP-Yxl" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="Wqa-MH-EnS"/>
                             <constraint firstItem="LyX-4w-bhe" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="ekT-9k-PzF"/>
+                            <constraint firstAttribute="centerY" secondItem="NNT-dZ-UYp" secondAttribute="centerY" id="fte-wU-8um"/>
                             <constraint firstAttribute="trailing" secondItem="hAF-qP-Yxl" secondAttribute="trailing" id="g8y-6p-dhx"/>
                             <constraint firstAttribute="width" secondItem="LyX-4w-bhe" secondAttribute="width" multiplier="2" id="lzH-1Q-ycC"/>
+                            <constraint firstItem="NNT-dZ-UYp" firstAttribute="height" secondItem="svH-Pt-448" secondAttribute="height" id="mLx-WS-Yyc"/>
                             <constraint firstItem="hAF-qP-Yxl" firstAttribute="height" secondItem="svH-Pt-448" secondAttribute="height" multiplier="0.5" id="pbL-lQ-vil"/>
+                            <constraint firstItem="NNT-dZ-UYp" firstAttribute="width" secondItem="svH-Pt-448" secondAttribute="width" id="x4g-GA-kkS"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
@@ -117,6 +123,7 @@
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
+                        <outlet property="bgImageView" destination="NNT-dZ-UYp" id="dvl-J3-ww6"/>
                         <outlet property="descriptionLabel" destination="vU3-2E-K7v" id="KsB-17-NdT"/>
                         <outlet property="furtherDetailLabel" destination="CY4-v1-oAZ" id="TFa-ci-dJX"/>
                         <outlet property="imageView" destination="LyX-4w-bhe" id="YZ8-sY-TWx"/>
@@ -210,6 +217,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg_tall" width="768" height="1024"/>
         <image name="kusarigama" width="770" height="606"/>
     </resources>
     <inferredMetricsTieBreakers>
