@@ -95,22 +95,22 @@
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="Esa-n4-Osn"/>
-                                <exclude reference="lzH-1Q-ycC"/>
                                 <exclude reference="1fa-9l-CfN"/>
                                 <exclude reference="P18-te-t3T"/>
+                                <exclude reference="Esa-n4-Osn"/>
+                                <exclude reference="lzH-1Q-ycC"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
-                                <exclude reference="4TT-a1-6i4"/>
-                                <exclude reference="DOr-Nd-S5c"/>
-                                <include reference="Esa-n4-Osn"/>
-                                <include reference="lzH-1Q-ycC"/>
                                 <include reference="1fa-9l-CfN"/>
                                 <include reference="P18-te-t3T"/>
                                 <exclude reference="Wqa-MH-EnS"/>
                                 <exclude reference="pbL-lQ-vil"/>
+                                <exclude reference="4TT-a1-6i4"/>
+                                <exclude reference="DOr-Nd-S5c"/>
+                                <include reference="Esa-n4-Osn"/>
+                                <include reference="lzH-1Q-ycC"/>
                             </mask>
                         </variation>
                     </view>
@@ -122,6 +122,14 @@
                         <outlet property="imageView" destination="LyX-4w-bhe" id="YZ8-sY-TWx"/>
                         <outlet property="nameLabel" destination="d0U-16-5uK" id="kpu-An-svB"/>
                         <outlet property="partOfSpeechLabel" destination="cZr-c6-BFe" id="at3-hC-ulX"/>
+                        <outletCollection property="wideLayoutConstraints" destination="Esa-n4-Osn" collectionClass="NSMutableArray" id="VMn-ZX-UbZ"/>
+                        <outletCollection property="wideLayoutConstraints" destination="lzH-1Q-ycC" collectionClass="NSMutableArray" id="WuQ-kc-Qrp"/>
+                        <outletCollection property="wideLayoutConstraints" destination="1fa-9l-CfN" collectionClass="NSMutableArray" id="U9w-oV-iF9"/>
+                        <outletCollection property="wideLayoutConstraints" destination="P18-te-t3T" collectionClass="NSMutableArray" id="0A8-9M-GaS"/>
+                        <outletCollection property="tallLayoutConstraints" destination="4TT-a1-6i4" collectionClass="NSMutableArray" id="S7O-Nx-Zov"/>
+                        <outletCollection property="tallLayoutConstraints" destination="DOr-Nd-S5c" collectionClass="NSMutableArray" id="t3n-K0-cfz"/>
+                        <outletCollection property="tallLayoutConstraints" destination="Wqa-MH-EnS" collectionClass="NSMutableArray" id="dSe-qy-DkS"/>
+                        <outletCollection property="tallLayoutConstraints" destination="pbL-lQ-vil" collectionClass="NSMutableArray" id="3Kk-qe-Sq4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>
@@ -205,6 +213,6 @@
         <image name="kusarigama" width="770" height="606"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6S0-TO-JiA"/>
+        <segue reference="Tll-UG-LXB"/>
     </inferredMetricsTieBreakers>
 </document>

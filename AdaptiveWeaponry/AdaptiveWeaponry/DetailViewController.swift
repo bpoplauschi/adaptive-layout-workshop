@@ -24,6 +24,9 @@ class DetailViewController: UIViewController {
   @IBOutlet weak var descriptionLabel: UILabel!
   @IBOutlet weak var imageView: UIImageView!
   
+  @IBOutlet var wideLayoutConstraints: [NSLayoutConstraint]!
+  @IBOutlet var tallLayoutConstraints: [NSLayoutConstraint]!
+  
   var weapon: Weapon? {
     didSet {
       // Update the view.
@@ -48,7 +51,27 @@ class DetailViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     // Do any additional setup after loading the view, typically from a nib.
+    setupConstraintsForSize(view.bounds.size)
     self.configureView()
+  }
+  
+  override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+    super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+    setupConstraintsForSize(size)
+  }
+  
+  func setupConstraintsForSize(size: CGSize) {
+    view.layoutIfNeeded()
+    if(size.width >= size.height) {
+      // Going wide
+      NSLayoutConstraint.deactivateConstraints(tallLayoutConstraints)
+      NSLayoutConstraint.activateConstraints(wideLayoutConstraints)
+    } else {
+      // Going tall
+      NSLayoutConstraint.deactivateConstraints(wideLayoutConstraints)
+      NSLayoutConstraint.activateConstraints(tallLayoutConstraints)
+    }
+    view.layoutIfNeeded()
   }
 
 }
