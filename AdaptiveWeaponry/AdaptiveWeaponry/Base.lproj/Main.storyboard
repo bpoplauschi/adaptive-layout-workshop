@@ -80,15 +80,29 @@
                                     </label>
                                 </subviews>
                                 <constraints>
-                                    <constraint firstItem="vU3-2E-K7v" firstAttribute="top" secondItem="CY4-v1-oAZ" secondAttribute="bottom" constant="8" id="35x-pV-kuE"/>
-                                    <constraint firstItem="CY4-v1-oAZ" firstAttribute="leading" secondItem="hAF-qP-Yxl" secondAttribute="leadingMargin" id="B2G-cE-29H"/>
-                                    <constraint firstItem="d0U-16-5uK" firstAttribute="leading" secondItem="hAF-qP-Yxl" secondAttribute="leadingMargin" id="Emt-rJ-4L7"/>
-                                    <constraint firstItem="cZr-c6-BFe" firstAttribute="leading" secondItem="hAF-qP-Yxl" secondAttribute="leadingMargin" id="JeX-yi-giB"/>
+                                    <constraint firstItem="vU3-2E-K7v" firstAttribute="top" secondItem="CY4-v1-oAZ" secondAttribute="bottom" constant="8" id="35x-pV-kuE">
+                                        <variation key="widthClass=regular" constant="16"/>
+                                    </constraint>
+                                    <constraint firstItem="CY4-v1-oAZ" firstAttribute="leading" secondItem="hAF-qP-Yxl" secondAttribute="leadingMargin" id="B2G-cE-29H">
+                                        <variation key="widthClass=regular" constant="20"/>
+                                    </constraint>
+                                    <constraint firstItem="d0U-16-5uK" firstAttribute="leading" secondItem="hAF-qP-Yxl" secondAttribute="leadingMargin" id="Emt-rJ-4L7">
+                                        <variation key="widthClass=regular" constant="20"/>
+                                    </constraint>
+                                    <constraint firstItem="cZr-c6-BFe" firstAttribute="leading" secondItem="hAF-qP-Yxl" secondAttribute="leadingMargin" id="JeX-yi-giB">
+                                        <variation key="widthClass=regular" constant="20"/>
+                                    </constraint>
                                     <constraint firstItem="cZr-c6-BFe" firstAttribute="top" secondItem="d0U-16-5uK" secondAttribute="bottom" id="SiX-7l-Kgg"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="vU3-2E-K7v" secondAttribute="trailing" id="Ska-VE-vtc"/>
-                                    <constraint firstItem="CY4-v1-oAZ" firstAttribute="top" secondItem="cZr-c6-BFe" secondAttribute="bottom" constant="8" id="ft7-Dp-lYg"/>
-                                    <constraint firstItem="vU3-2E-K7v" firstAttribute="leading" secondItem="hAF-qP-Yxl" secondAttribute="leadingMargin" id="kBY-kj-Ja3"/>
-                                    <constraint firstItem="d0U-16-5uK" firstAttribute="top" secondItem="hAF-qP-Yxl" secondAttribute="topMargin" constant="60" id="ut7-uO-fxQ"/>
+                                    <constraint firstItem="CY4-v1-oAZ" firstAttribute="top" secondItem="cZr-c6-BFe" secondAttribute="bottom" constant="8" id="ft7-Dp-lYg">
+                                        <variation key="widthClass=regular" constant="16"/>
+                                    </constraint>
+                                    <constraint firstItem="vU3-2E-K7v" firstAttribute="leading" secondItem="hAF-qP-Yxl" secondAttribute="leadingMargin" id="kBY-kj-Ja3">
+                                        <variation key="widthClass=regular" constant="20"/>
+                                    </constraint>
+                                    <constraint firstItem="d0U-16-5uK" firstAttribute="top" secondItem="hAF-qP-Yxl" secondAttribute="topMargin" constant="60" id="ut7-uO-fxQ">
+                                        <variation key="widthClass=regular" constant="80"/>
+                                    </constraint>
                                 </constraints>
                             </view>
                         </subviews>
