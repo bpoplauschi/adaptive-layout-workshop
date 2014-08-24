@@ -58,7 +58,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Description" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vU3-2E-K7v">
-                                        <rect key="frame" x="8" y="183.5" width="584" height="19"/>
+                                        <rect key="frame" x="8" y="183" width="584" height="19"/>
                                         <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="16"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
@@ -80,15 +80,39 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstAttribute="bottom" secondItem="hAF-qP-Yxl" secondAttribute="bottom" id="1fa-9l-CfN"/>
                             <constraint firstAttribute="trailing" secondItem="LyX-4w-bhe" secondAttribute="trailing" id="4TT-a1-6i4"/>
                             <constraint firstItem="LyX-4w-bhe" firstAttribute="height" secondItem="svH-Pt-448" secondAttribute="height" multiplier="0.5" id="DOr-Nd-S5c"/>
+                            <constraint firstItem="LyX-4w-bhe" firstAttribute="top" secondItem="svH-Pt-448" secondAttribute="top" id="Esa-n4-Osn"/>
                             <constraint firstItem="hAF-qP-Yxl" firstAttribute="top" secondItem="svH-Pt-448" secondAttribute="top" id="Iu2-nZ-fkv"/>
+                            <constraint firstItem="hAF-qP-Yxl" firstAttribute="width" secondItem="svH-Pt-448" secondAttribute="width" multiplier="0.5" id="P18-te-t3T"/>
                             <constraint firstAttribute="bottom" secondItem="LyX-4w-bhe" secondAttribute="bottom" id="Tdp-Rh-2aI"/>
                             <constraint firstItem="hAF-qP-Yxl" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="Wqa-MH-EnS"/>
                             <constraint firstItem="LyX-4w-bhe" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="ekT-9k-PzF"/>
                             <constraint firstAttribute="trailing" secondItem="hAF-qP-Yxl" secondAttribute="trailing" id="g8y-6p-dhx"/>
+                            <constraint firstAttribute="width" secondItem="LyX-4w-bhe" secondAttribute="width" multiplier="2" id="lzH-1Q-ycC"/>
                             <constraint firstItem="hAF-qP-Yxl" firstAttribute="height" secondItem="svH-Pt-448" secondAttribute="height" multiplier="0.5" id="pbL-lQ-vil"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Esa-n4-Osn"/>
+                                <exclude reference="lzH-1Q-ycC"/>
+                                <exclude reference="1fa-9l-CfN"/>
+                                <exclude reference="P18-te-t3T"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=compact">
+                            <mask key="constraints">
+                                <exclude reference="4TT-a1-6i4"/>
+                                <exclude reference="DOr-Nd-S5c"/>
+                                <include reference="Esa-n4-Osn"/>
+                                <include reference="lzH-1Q-ycC"/>
+                                <include reference="1fa-9l-CfN"/>
+                                <include reference="P18-te-t3T"/>
+                                <exclude reference="Wqa-MH-EnS"/>
+                                <exclude reference="pbL-lQ-vil"/>
+                            </mask>
+                        </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
