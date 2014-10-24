@@ -6,9 +6,15 @@
 
 ---
 
+# ShinobiControls
+
+[shinobicontrols.com/giveaway](http://www.shinobicontrols.com/giveaway)
+
+---
+
 ## Requirements
 
-- Xcode 6 (β6)
+- Xcode 6.1
 - __AdaptiveWeaponry__ sample project
 
 ---
@@ -37,4 +43,6 @@
 | iPad Landscape   | Regular             | Regular               |
 | iPhone Portrait  | Regular             | Compact               |
 | iPhone Landscape | Compact             | Compact               |
+| iPhone 6 L/Scape | Compact             | Regular               |
+
 
