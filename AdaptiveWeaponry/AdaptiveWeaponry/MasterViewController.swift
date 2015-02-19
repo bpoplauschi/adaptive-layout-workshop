@@ -60,7 +60,7 @@ class MasterViewController: UITableViewController {
   override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
     let weapon = weaponProvider.weapons[indexPath.row]
-    cell.textLabel.text = weapon.name
+    cell.textLabel?.text = weapon.name
     return cell
   }
   
