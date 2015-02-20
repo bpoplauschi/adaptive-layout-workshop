@@ -18,6 +18,7 @@ import UIKit
 
 class DetailViewController: UIViewController {
     
+    @IBOutlet weak var backgroundImageView: UIImageView!
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var partOfSpeechLabel: UILabel!
@@ -47,6 +48,10 @@ class DetailViewController: UIViewController {
             self.furtherDetailLabel.text = weapon.alternative
             self.descriptionLabel.text = weapon.detail
         }
+        
+        let transitionToWide = view.bounds.size.width > view.bounds.size.height
+        let image = UIImage(named: transitionToWide ? "bg_wide" : "bg_tall")
+        self.backgroundImageView.image = image;
     }
     
     override func viewDidLoad() {
@@ -59,6 +64,21 @@ class DetailViewController: UIViewController {
     override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
         super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
         self.setupConstraingsForSize(size)
+        
+        let transitionToWide = size.width > size.height
+        let image = UIImage(named: transitionToWide ? "bg_wide" : "bg_tall")
+        
+        coordinator.animateAlongsideTransition({
+            context in
+            let transition = CATransition()
+            transition.duration = context.transitionDuration()
+            
+            transition.timingFunction = CAMediaTimingFunction(name: kCAMediaTimingFunctionEaseInEaseOut)
+            transition.type = kCATransitionFade
+            
+            self.backgroundImageView.layer.addAnimation(transition, forKey: "Fade")
+            self.backgroundImageView.image = image
+            }, completion: nil)
     }
     
     private func setupConstraingsForSize(size: CGSize) {

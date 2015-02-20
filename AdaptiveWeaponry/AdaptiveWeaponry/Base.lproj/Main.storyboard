@@ -34,7 +34,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="katana" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-O0-UtV">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_tall" translatesAutoresizingMaskIntoConstraints="NO" id="caZ-pm-LR6">
+                                <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="katana" translatesAutoresizingMaskIntoConstraints="NO" id="3pO-O0-UtV">
                                 <rect key="frame" x="0.0" y="300" width="600" height="300"/>
                             </imageView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxD-Cp-QgY" userLabel="LabelContainer">
@@ -65,7 +68,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
-                                <color key="backgroundColor" red="0.66666666666666663" green="0.27113228397177613" blue="0.21883164537350225" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstItem="DbK-16-2Q4" firstAttribute="leading" secondItem="ycg-rK-Scl" secondAttribute="leading" id="DBb-Nm-uRt"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="9jC-dp-iyj" secondAttribute="trailing" constant="16" id="M8p-OG-qBr"/>
@@ -85,39 +88,44 @@
                             <constraint firstItem="3pO-O0-UtV" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="5kZ-YF-tJv"/>
                             <constraint firstItem="xxD-Cp-QgY" firstAttribute="leading" secondItem="3pO-O0-UtV" secondAttribute="trailing" id="788-Jb-Wmj"/>
                             <constraint firstAttribute="bottom" secondItem="xxD-Cp-QgY" secondAttribute="bottom" id="7l7-fi-jkY"/>
+                            <constraint firstAttribute="trailing" secondItem="caZ-pm-LR6" secondAttribute="trailing" id="8mb-sM-2jC"/>
                             <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="3pO-O0-UtV" secondAttribute="bottom" id="AB2-O6-ui0"/>
                             <constraint firstAttribute="trailing" secondItem="xxD-Cp-QgY" secondAttribute="trailing" id="D8d-Mc-zEd"/>
+                            <constraint firstItem="caZ-pm-LR6" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="FfQ-3Y-QXj"/>
                             <constraint firstItem="3pO-O0-UtV" firstAttribute="top" secondItem="xxD-Cp-QgY" secondAttribute="bottom" id="Lmx-uh-N0V"/>
                             <constraint firstItem="3pO-O0-UtV" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="-16" id="WkQ-a6-twu"/>
+                            <constraint firstItem="GAO-Cl-Wes" firstAttribute="top" secondItem="caZ-pm-LR6" secondAttribute="bottom" id="ZaH-vw-YPA"/>
                             <constraint firstItem="xxD-Cp-QgY" firstAttribute="top" secondItem="SYR-Wa-9uf" secondAttribute="bottom" id="bwi-q0-PrD"/>
                             <constraint firstAttribute="trailing" secondItem="3pO-O0-UtV" secondAttribute="trailing" id="fLN-VH-1Yo"/>
                             <constraint firstItem="xxD-Cp-QgY" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leadingMargin" constant="-16" id="hxo-Od-XW9"/>
+                            <constraint firstItem="caZ-pm-LR6" firstAttribute="leading" secondItem="svH-Pt-448" secondAttribute="leading" id="pyH-O7-ifB"/>
                             <constraint firstItem="3pO-O0-UtV" firstAttribute="height" secondItem="svH-Pt-448" secondAttribute="height" multiplier="0.5" id="wC0-0A-m0D"/>
                         </constraints>
                         <variation key="default">
                             <mask key="constraints">
-                                <exclude reference="38F-ze-6XR"/>
-                                <exclude reference="5kZ-YF-tJv"/>
                                 <exclude reference="788-Jb-Wmj"/>
                                 <exclude reference="7l7-fi-jkY"/>
+                                <exclude reference="38F-ze-6XR"/>
+                                <exclude reference="5kZ-YF-tJv"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=compact">
                             <mask key="constraints">
+                                <include reference="788-Jb-Wmj"/>
+                                <include reference="7l7-fi-jkY"/>
+                                <exclude reference="hxo-Od-XW9"/>
                                 <include reference="38F-ze-6XR"/>
                                 <include reference="5kZ-YF-tJv"/>
                                 <exclude reference="Lmx-uh-N0V"/>
                                 <exclude reference="fLN-VH-1Yo"/>
                                 <exclude reference="wC0-0A-m0D"/>
-                                <include reference="788-Jb-Wmj"/>
-                                <include reference="7l7-fi-jkY"/>
-                                <exclude reference="hxo-Od-XW9"/>
                             </mask>
                         </variation>
                     </view>
                     <toolbarItems/>
                     <navigationItem key="navigationItem" title="Detail" id="mOI-FS-AaM"/>
                     <connections>
+                        <outlet property="backgroundImageView" destination="caZ-pm-LR6" id="fjl-rb-LKc"/>
                         <outlet property="descriptionLabel" destination="9jC-dp-iyj" id="a0a-ts-gWh"/>
                         <outlet property="furtherDetailLabel" destination="DbK-16-2Q4" id="BLL-Tk-926"/>
                         <outlet property="imageView" destination="3pO-O0-UtV" id="8vF-3s-IYc"/>
@@ -219,6 +227,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bg_tall" width="768" height="1024"/>
         <image name="katana" width="1024" height="619"/>
     </resources>
     <inferredMetricsTieBreakers>
