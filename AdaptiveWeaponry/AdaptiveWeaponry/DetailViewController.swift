@@ -17,28 +17,43 @@
 import UIKit
 
 class DetailViewController: UIViewController {
-
-  var weapon: Weapon? {
-    didSet {
-      // Update the view.
-      if isViewLoaded() {
+    
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var partOfSpeechLabel: UILabel!
+    
+    @IBOutlet weak var furtherDetailLabel: UILabel!
+    
+    @IBOutlet weak var descriptionLabel: UILabel!
+    
+    
+    var weapon: Weapon? {
+        didSet {
+            // Update the view.
+            if isViewLoaded() {
+                self.configureView()
+            }
+        }
+    }
+    
+    func configureView() {
+        // Update the user interface for the detail item.
+        if let weapon = self.weapon {
+            self.title = weapon.name
+            
+            self.imageView.image = weapon.image
+            self.nameLabel.text = weapon.name
+            self.partOfSpeechLabel.text = weapon.partOfSpeech
+            self.furtherDetailLabel.text = weapon.alternative
+            self.descriptionLabel.text = weapon.detail
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
-      }
     }
-  }
-  
-  func configureView() {
-    // Update the user interface for the detail item.
-    if let weapon = self.weapon {
-      self.title = weapon.name
-    }
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    self.configureView()
-  }
-
+    
 }
 

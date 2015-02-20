@@ -17,52 +17,52 @@
 import UIKit
 
 class MasterViewController: UITableViewController {
-  
-  var detailViewController: DetailViewController? = nil
-  let weaponProvider = WeaponProvider()
-  
-  override func awakeFromNib() {
-    super.awakeFromNib()
-    if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
-      self.clearsSelectionOnViewWillAppear = false
-      self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
+    
+    var detailViewController: DetailViewController? = nil
+    let weaponProvider = WeaponProvider()
+    
+    override func awakeFromNib() {
+        super.awakeFromNib()
+        if UIDevice.currentDevice().userInterfaceIdiom == .Pad {
+            self.clearsSelectionOnViewWillAppear = false
+            self.preferredContentSize = CGSize(width: 320.0, height: 600.0)
+        }
     }
-  }
-  
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    // Do any additional setup after loading the view, typically from a nib.
-    self.title = "Weapons"
-  }
-  
-  
-  // MARK: - Segues
-  override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-    if segue.identifier == "showDetail" {
-      let indexPath = self.tableView.indexPathForSelectedRow()
-      let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
-      let weapon = weaponProvider.weapons[indexPath!.row];
-      controller.weapon = weapon
-      controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
-      controller.navigationItem.leftItemsSupplementBackButton = true
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+        self.title = "Weapons"
     }
-  }
-  
-  // MARK: - Table View
-  override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-    return 1
-  }
-  
-  override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-    return weaponProvider.weapons.count
-  }
-  
-  override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
-    let weapon = weaponProvider.weapons[indexPath.row]
-    cell.textLabel?.text = weapon.name
-    return cell
-  }
-  
+    
+    
+    // MARK: - Segues
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "showDetail" {
+            let indexPath = self.tableView.indexPathForSelectedRow()
+            let controller = (segue.destinationViewController as UINavigationController).topViewController as DetailViewController
+            let weapon = weaponProvider.weapons[indexPath!.row];
+            controller.weapon = weapon
+            controller.navigationItem.leftBarButtonItem = self.splitViewController?.displayModeButtonItem()
+            controller.navigationItem.leftItemsSupplementBackButton = true
+        }
+    }
+    
+    // MARK: - Table View
+    override func numberOfSectionsInTableView(tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return weaponProvider.weapons.count
+    }
+    
+    override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell", forIndexPath: indexPath) as UITableViewCell
+        let weapon = weaponProvider.weapons[indexPath.row]
+        cell.textLabel?.text = weapon.name
+        return cell
+    }
+    
 }
 
