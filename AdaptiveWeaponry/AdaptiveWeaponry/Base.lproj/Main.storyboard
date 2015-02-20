@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6254" systemVersion="14C109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="H1p-Uh-vWS">
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6247"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
@@ -122,6 +123,22 @@
                         <outlet property="imageView" destination="3pO-O0-UtV" id="8vF-3s-IYc"/>
                         <outlet property="nameLabel" destination="ycg-rK-Scl" id="2de-vK-FpW"/>
                         <outlet property="partOfSpeechLabel" destination="1wr-Mg-B7M" id="1tc-Q6-De0"/>
+                        <outletCollection property="wideLayoutConstraints" destination="38F-ze-6XR" collectionClass="NSMutableArray" id="6fR-eG-Boi"/>
+                        <outletCollection property="wideLayoutConstraints" destination="5kZ-YF-tJv" collectionClass="NSMutableArray" id="rhE-52-6xz"/>
+                        <outletCollection property="wideLayoutConstraints" destination="WkQ-a6-twu" collectionClass="NSMutableArray" id="8YR-eu-ni9"/>
+                        <outletCollection property="wideLayoutConstraints" destination="788-Jb-Wmj" collectionClass="NSMutableArray" id="FLJ-Oj-7Zs"/>
+                        <outletCollection property="wideLayoutConstraints" destination="7l7-fi-jkY" collectionClass="NSMutableArray" id="Ztv-9m-J7E"/>
+                        <outletCollection property="wideLayoutConstraints" destination="D8d-Mc-zEd" collectionClass="NSMutableArray" id="GqW-Ae-lco"/>
+                        <outletCollection property="wideLayoutConstraints" destination="bwi-q0-PrD" collectionClass="NSMutableArray" id="rtz-pO-139"/>
+                        <outletCollection property="wideLayoutConstraints" destination="AB2-O6-ui0" collectionClass="NSMutableArray" id="zmh-MG-LX4"/>
+                        <outletCollection property="tallLayoutConstraints" destination="Lmx-uh-N0V" collectionClass="NSMutableArray" id="9G5-ym-CGW"/>
+                        <outletCollection property="tallLayoutConstraints" destination="WkQ-a6-twu" collectionClass="NSMutableArray" id="f1B-Em-hRg"/>
+                        <outletCollection property="tallLayoutConstraints" destination="fLN-VH-1Yo" collectionClass="NSMutableArray" id="MEz-CU-DVQ"/>
+                        <outletCollection property="tallLayoutConstraints" destination="wC0-0A-m0D" collectionClass="NSMutableArray" id="56Q-o0-Kz1"/>
+                        <outletCollection property="tallLayoutConstraints" destination="D8d-Mc-zEd" collectionClass="NSMutableArray" id="prB-sT-INH"/>
+                        <outletCollection property="tallLayoutConstraints" destination="bwi-q0-PrD" collectionClass="NSMutableArray" id="dtj-ap-3Ts"/>
+                        <outletCollection property="tallLayoutConstraints" destination="hxo-Od-XW9" collectionClass="NSMutableArray" id="dDS-FK-ajl"/>
+                        <outletCollection property="tallLayoutConstraints" destination="AB2-O6-ui0" collectionClass="NSMutableArray" id="zRb-xh-sTW"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FJe-Yq-33r" sceneMemberID="firstResponder"/>

@@ -21,11 +21,12 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var partOfSpeechLabel: UILabel!
-    
     @IBOutlet weak var furtherDetailLabel: UILabel!
-    
     @IBOutlet weak var descriptionLabel: UILabel!
     
+    @IBOutlet var tallLayoutConstraints: [NSLayoutConstraint]!
+    
+    @IBOutlet var wideLayoutConstraints: [NSLayoutConstraint]!
     
     var weapon: Weapon? {
         didSet {
@@ -40,7 +41,6 @@ class DetailViewController: UIViewController {
         // Update the user interface for the detail item.
         if let weapon = self.weapon {
             self.title = weapon.name
-            
             self.imageView.image = weapon.image
             self.nameLabel.text = weapon.name
             self.partOfSpeechLabel.text = weapon.partOfSpeech
@@ -53,7 +53,28 @@ class DetailViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         self.configureView()
+        self.setupConstraingsForSize(view.bounds.size)
     }
     
+    override func viewWillTransitionToSize(size: CGSize, withTransitionCoordinator coordinator: UIViewControllerTransitionCoordinator) {
+        super.viewWillTransitionToSize(size, withTransitionCoordinator: coordinator)
+        self.setupConstraingsForSize(size)
+    }
+    
+    private func setupConstraingsForSize(size: CGSize) {
+        view.layoutIfNeeded()
+        
+        if (size.width >= size.height) {
+            // Side-by-side layout
+            NSLayoutConstraint.deactivateConstraints(self.tallLayoutConstraints)
+            NSLayoutConstraint.activateConstraints(self.wideLayoutConstraints)
+        } else {
+            // On-top-of layout
+            NSLayoutConstraint.deactivateConstraints(self.wideLayoutConstraints)
+            NSLayoutConstraint.activateConstraints(self.tallLayoutConstraints)
+        }
+        
+        view.layoutIfNeeded()
+    }
 }
 
