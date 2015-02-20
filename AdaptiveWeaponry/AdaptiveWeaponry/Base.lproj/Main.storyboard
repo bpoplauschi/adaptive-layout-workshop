@@ -43,6 +43,24 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xxD-Cp-QgY" userLabel="LabelContainer">
                                 <rect key="frame" x="0.0" y="64" width="600" height="236"/>
                                 <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_tall" translatesAutoresizingMaskIntoConstraints="NO" id="WIJ-kA-v15">
+                                        <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="DQ5-qE-49Q">
+                                                <variation key="heightClass=regular" constant="80"/>
+                                            </constraint>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="DQ5-qE-49Q"/>
+                                            </mask>
+                                        </variation>
+                                        <variation key="heightClass=regular">
+                                            <mask key="constraints">
+                                                <include reference="DQ5-qE-49Q"/>
+                                            </mask>
+                                        </variation>
+                                    </imageView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ycg-rK-Scl">
                                         <rect key="frame" x="8" y="8" width="73" height="33.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="28"/>
@@ -75,6 +93,10 @@
                                 <constraints>
                                     <constraint firstItem="DbK-16-2Q4" firstAttribute="leading" secondItem="ycg-rK-Scl" secondAttribute="leading" id="DBb-Nm-uRt"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="9jC-dp-iyj" secondAttribute="trailing" constant="16" id="M8p-OG-qBr"/>
+                                    <constraint firstItem="ycg-rK-Scl" firstAttribute="top" secondItem="WIJ-kA-v15" secondAttribute="bottom" constant="20" id="QpD-E0-ZDf"/>
+                                    <constraint firstItem="WIJ-kA-v15" firstAttribute="leading" secondItem="xxD-Cp-QgY" secondAttribute="leading" constant="172" id="RsQ-W8-6Qc">
+                                        <variation key="heightClass=regular" constant="0.0"/>
+                                    </constraint>
                                     <constraint firstItem="ycg-rK-Scl" firstAttribute="leading" secondItem="9jC-dp-iyj" secondAttribute="leading" id="SIL-I0-k2a"/>
                                     <constraint firstItem="ycg-rK-Scl" firstAttribute="leading" secondItem="xxD-Cp-QgY" secondAttribute="leadingMargin" id="dG9-Kk-W9b">
                                         <variation key="heightClass=regular-widthClass=regular" constant="100"/>
@@ -84,7 +106,34 @@
                                     <constraint firstItem="9jC-dp-iyj" firstAttribute="top" secondItem="DbK-16-2Q4" secondAttribute="bottom" constant="8" id="iIw-l1-70y"/>
                                     <constraint firstItem="ycg-rK-Scl" firstAttribute="top" secondItem="xxD-Cp-QgY" secondAttribute="topMargin" id="p7x-oL-ZV8"/>
                                     <constraint firstItem="DbK-16-2Q4" firstAttribute="top" secondItem="1wr-Mg-B7M" secondAttribute="bottom" constant="8" id="uPP-4t-bX3"/>
+                                    <constraint firstAttribute="trailing" secondItem="WIJ-kA-v15" secondAttribute="trailing" id="uwN-My-A77"/>
+                                    <constraint firstItem="WIJ-kA-v15" firstAttribute="top" secondItem="xxD-Cp-QgY" secondAttribute="top" id="xr3-Qr-uyX">
+                                        <variation key="heightClass=regular" constant="40"/>
+                                    </constraint>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="subviews">
+                                        <exclude reference="WIJ-kA-v15"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <exclude reference="QpD-E0-ZDf"/>
+                                        <exclude reference="RsQ-W8-6Qc"/>
+                                        <exclude reference="uwN-My-A77"/>
+                                        <exclude reference="xr3-Qr-uyX"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular">
+                                    <mask key="subviews">
+                                        <include reference="WIJ-kA-v15"/>
+                                    </mask>
+                                    <mask key="constraints">
+                                        <include reference="QpD-E0-ZDf"/>
+                                        <include reference="RsQ-W8-6Qc"/>
+                                        <include reference="uwN-My-A77"/>
+                                        <include reference="xr3-Qr-uyX"/>
+                                        <exclude reference="p7x-oL-ZV8"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
