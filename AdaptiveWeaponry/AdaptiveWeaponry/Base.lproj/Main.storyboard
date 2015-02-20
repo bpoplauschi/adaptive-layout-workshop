@@ -49,12 +49,12 @@
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="heightClass=regular-widthClass=regular">
-                                            <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="50"/>
+                                            <fontDescription key="fontDescription" name="HiraKakuProN-W3" family="Hiragino Kaku Gothic ProN" pointSize="73"/>
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="partOfSpeech" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1wr-Mg-B7M">
                                         <rect key="frame" x="8" y="49" width="135" height="26.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                        <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="30"/>
                                         <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -76,7 +76,9 @@
                                     <constraint firstItem="DbK-16-2Q4" firstAttribute="leading" secondItem="ycg-rK-Scl" secondAttribute="leading" id="DBb-Nm-uRt"/>
                                     <constraint firstAttribute="trailingMargin" secondItem="9jC-dp-iyj" secondAttribute="trailing" constant="16" id="M8p-OG-qBr"/>
                                     <constraint firstItem="ycg-rK-Scl" firstAttribute="leading" secondItem="9jC-dp-iyj" secondAttribute="leading" id="SIL-I0-k2a"/>
-                                    <constraint firstItem="ycg-rK-Scl" firstAttribute="leading" secondItem="xxD-Cp-QgY" secondAttribute="leadingMargin" id="dG9-Kk-W9b"/>
+                                    <constraint firstItem="ycg-rK-Scl" firstAttribute="leading" secondItem="xxD-Cp-QgY" secondAttribute="leadingMargin" id="dG9-Kk-W9b">
+                                        <variation key="heightClass=regular-widthClass=regular" constant="100"/>
+                                    </constraint>
                                     <constraint firstItem="1wr-Mg-B7M" firstAttribute="top" secondItem="ycg-rK-Scl" secondAttribute="bottom" constant="8" id="gWE-wh-jop"/>
                                     <constraint firstItem="ycg-rK-Scl" firstAttribute="leading" secondItem="1wr-Mg-B7M" secondAttribute="leading" id="gng-uw-CaE"/>
                                     <constraint firstItem="9jC-dp-iyj" firstAttribute="top" secondItem="DbK-16-2Q4" secondAttribute="bottom" constant="8" id="iIw-l1-70y"/>
